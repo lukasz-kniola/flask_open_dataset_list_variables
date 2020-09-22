@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Step 3{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  {% for k,v in vars %}
+  <b>{{k}}</b> = {{v}}
+  <br>
+  {% endfor %}
+
+  <hr>
+  <form method=post enctype=multipart/form-data>
+  <input type="hidden" id="action" name="action" value="step2">
+  <input type=file name=file>
+  <input type=submit value="Select new CSV file">
+  </form>
+{% endblock %}

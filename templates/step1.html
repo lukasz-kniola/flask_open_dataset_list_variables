@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Step 1{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method=post enctype=multipart/form-data>
+    <input type="hidden" id="action" name="action" value="step2">
+    <input type=file name=file><br>
+    <input type="text" placeholder="arg1" name="arg1"></input><br>
+    <input type=submit value="Select CSV file">
+  </form>
+{% endblock %}
+
+
